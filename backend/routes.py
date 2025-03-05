@@ -42,3 +42,22 @@ def create_friend():
     except Exception as e:
         db.session.rollback()
         return jsonify({"error": str(e)}), 500
+    
+#Delte a friend
+@app.route("/api/friends/<int:id>", methods=["DELETE"])
+def delete_friend(id):
+    try:
+        friend = Friend.query.get(id)
+        if friend is None:
+            return jsonify({"error": "Friend not found"}), 404
+        db.session.delete(friend)
+        db.session.commit()
+
+        return jsonify({"msg": "Friend deleted"}), 200
+
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({"error": str(e)}), 500
+
+#Update a friend
+@app.route("/api/friends/<int:id>", methods = ["PATCH"])
