@@ -11,11 +11,13 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import { useState } from "react";
+import { useColorMode, useColorModeValue } from "./ui/color-mode";
 import { Field, Input, Textarea } from "@chakra-ui/react";
 import { CiEdit } from "react-icons/ci";
 
 const EditModal = () => {
   const [open, setOpen] = useState(false);
+  const { toggleColorMode, colorMode } = useColorMode();
   return (
     <DialogRoot lazyMount open={open} onOpenChange={(e) => setOpen(e.open)}>
       <DialogTrigger asChild>
@@ -23,7 +25,7 @@ const EditModal = () => {
           variant="ghost"
           size={"sm"}
           aria-label="See menu"
-          color={"blue.200"}
+          color={useColorModeValue("blue.900", "blue.200")} //To make the color of the edit icon iteractive
         >
           <CiEdit size={20} />
         </IconButton>
