@@ -1,5 +1,7 @@
 import { Grid } from "@chakra-ui/react";
 import React from "react";
+import { USERS } from "../dummy/dummy";
+import UserCard from "./UserCard";
 
 const UserGrid = () => {
   return (
@@ -9,7 +11,12 @@ const UserGrid = () => {
         md: "repeat(2, 1fr)",
         lg: "repeat(3, 1fr)",
       }}
-    ></Grid>
+      gap={4}
+    >
+      {USERS.map((user) => {
+        return <UserCard key={user.id} user={user} />;
+      })}
+    </Grid>
   );
 };
 
