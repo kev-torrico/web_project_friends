@@ -1,5 +1,3 @@
-"use client";
-
 import { Button, Flex, HStack, RadioGroup } from "@chakra-ui/react";
 import {
   DialogActionTrigger,
@@ -66,10 +64,10 @@ const CreateUserModal = () => {
           </RadioGroup.Root>
         </DialogBody>
         <DialogFooter>
+          <Button>Add</Button>
           <DialogActionTrigger asChild>
             <Button variant="outline">Cancel</Button>
           </DialogActionTrigger>
-          <Button>Add</Button>
         </DialogFooter>
         <DialogCloseTrigger />
       </DialogContent>
