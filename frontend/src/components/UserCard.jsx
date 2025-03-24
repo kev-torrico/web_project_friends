@@ -10,7 +10,7 @@ const UserCard = ({ user }) => {
         <Flex gap={"4"}>
           <Flex flex={"1"} gap={"4"} alignItems={"center"}>
             <Avatar.Root size="lg" shape="rounded">
-              <Avatar.Image src="https://avatar.iran.liara.run/public" />
+              <Avatar.Image src={user.imgUrl} />
               <Avatar.Fallback name="Avatar" />
             </Avatar.Root>
             <Box>
