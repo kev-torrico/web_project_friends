@@ -20,6 +20,8 @@ const items = [
 
 const CreateUserModal = () => {
   const [open, setOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [inputs, setInputs] = useState({});
   return (
     <DialogRoot lazyMount open={open} onOpenChange={(e) => setOpen(e.open)}>
       <DialogTrigger asChild>

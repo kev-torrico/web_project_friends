@@ -1,14 +1,4 @@
-import {
-  Avatar,
-  Box,
-  Button,
-  Card,
-  Field,
-  Flex,
-  IconButton,
-  Input,
-  Stack,
-} from "@chakra-ui/react";
+import { Avatar, Box, Card, Flex, IconButton } from "@chakra-ui/react";
 import React from "react";
 import { BiTrash } from "react-icons/bi";
 import EditModal from "./EditModal";
