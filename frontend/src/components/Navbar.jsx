@@ -4,7 +4,7 @@ import { useColorMode, useColorModeValue } from "./ui/color-mode";
 import { LuMoon, LuSun } from "react-icons/lu";
 import CreateUserModal from "./CreateUserModal";
 
-const Navbar = () => {
+const Navbar = ({ setUsers }) => {
   const { toggleColorMode, colorMode } = useColorMode(); //Copied from Chakra-ui to toggle light and dark color mode
   return (
     <Container maxW={"900px"}>
@@ -47,7 +47,7 @@ const Navbar = () => {
             >
               {colorMode === "light" ? <LuSun /> : <LuMoon />}
             </IconButton>
-            <CreateUserModal />
+            <CreateUserModal setUsers={setUsers} />
           </Flex>
         </Flex>
       </Box>

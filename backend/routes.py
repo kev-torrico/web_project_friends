@@ -27,6 +27,11 @@ def create_friend():
         description = data.get("description")
         gender = data.get("gender")
 
+        existing_friend = Friend.query.filter(Friend.name.ilike(name)).first()
+
+        if existing_friend :
+            return jsonify({"msg": "Friend already exists"}), 409
+        
         #Fetch avatar image based on gender
         if gender == "male":
             img_url = f"https://avatar.iran.liara.run/public/boy?username={name}"
@@ -34,12 +39,13 @@ def create_friend():
             img_url = f"https://avatar.iran.liara.run/public/girl?username={name}"
         else: 
             img_url = None
+
         new_friend = Friend(name=name, role=role, description=description, gender=gender, img_url=img_url)
         
         db.session.add(new_friend)
         db.session.commit()
 
-        return jsonify({"msg": "Friend created successfully"}), 201
+        return jsonify(new_friend.serialize()), 201
     except Exception as e:
         db.session.rollback()
         return jsonify({"error": str(e)}), 500

@@ -21,7 +21,7 @@ const items = [
   { label: "Female", value: "female" },
 ];
 
-const CreateUserModal = () => {
+const CreateUserModal = ({ setUsers }) => {
   const [open, setOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [inputs, setInputs] = useState({
@@ -56,7 +56,7 @@ const CreateUserModal = () => {
         duration: 4000,
       });
       setOpen(false);
-      //todo
+      setUsers((prevUsers) => [...prevUsers, data]);
     } catch (error) {
       toaster.create({
         title: "An error has occurred",
