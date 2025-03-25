@@ -33,17 +33,12 @@ Este proyecto fue desarrollado con las siguientes tecnologías:
 Para ejecutar correctamente el proyecto y visualizar la interfaz del **frontend**, sigue estos pasos:  
 
 ### 🔹 **Iniciar el Frontend**  
-1. Accede a la carpeta **`frontend`** desde la terminal:  
-   cd frontend
-2. Luego, ejecuta el siguiente comando para iniciar el servidor de desarrollo:
-   npm run dev
+1. Accede a la carpeta **`frontend`** desde la terminal:  cd frontend
+2. Luego, ejecuta el siguiente comando para iniciar el servidor de desarrollo:  npm run dev
 3. Esto iniciará la aplicación y podrás verla en tu navegador en la dirección proporcionada por el terminal (por defecto, http://localhost:3000 en Vite).
 
 ### 🔹 **Iniciar el Frontend**  
-1. Accede a la carpeta **`backend`** desde la terminal:  
-   cd backend
-2. Activa el entorno virtual de Python con el siguiente comando:
-   source venv/Scripts/activate  # En Windows
-3. Luego, ejecuta el siguiente comando para inicializar el servidor con Flask y habilitar la recarga automática en caso de cambios:
-   flask run --reload
+1. Accede a la carpeta **`backend`** desde la terminal:  cd backend
+2. Activa el entorno virtual de Python con el siguiente comando:  source venv/Scripts/activate  # En Windows
+3. Luego, ejecuta el siguiente comando para inicializar el servidor con Flask y habilitar la recarga automática en caso de cambios:  flask run --reload
 4. El backend se ejecutará en http://127.0.0.1:5000.
