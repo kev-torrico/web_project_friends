@@ -1,6 +1,7 @@
 import { Flex, Grid, Span, Spinner, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import UserCard from "./UserCard";
+import { BASE_URL } from "../App";
 
 const UserGrid = ({ users, setUsers }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -8,7 +9,7 @@ const UserGrid = ({ users, setUsers }) => {
   useEffect(() => {
     const getUsers = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:5000/api/friends");
+        const response = await fetch(BASE_URL + "/friends");
         const data = await response.json();
 
         if (!response.ok) {
@@ -35,7 +36,7 @@ const UserGrid = ({ users, setUsers }) => {
         gap={4}
       >
         {users.map((user) => {
-          return <UserCard key={user.id} user={user} />;
+          return <UserCard key={user.id} user={user} setUsers={setUsers} />;
         })}
       </Grid>
       {isLoading && (

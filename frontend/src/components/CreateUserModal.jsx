@@ -55,8 +55,10 @@ const CreateUserModal = ({ setUsers }) => {
         description: "Friend created successfully.",
         duration: 4000,
       });
-      setOpen(false);
-      setUsers((prevUsers) => [...prevUsers, data]);
+      setTimeout(() => {
+        setOpen(false);
+        setUsers((prevUsers) => [...prevUsers, data]);
+      }, 1500);
     } catch (error) {
       toaster.create({
         title: "An error has occurred",
