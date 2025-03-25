@@ -26,3 +26,24 @@ Este proyecto fue desarrollado con las siguientes tecnologías:
 ---
 
 ✍ **Nota:** El proyecto cuenta con un Navbar y un Main Section donde se muestran las tarjetas (cards) de los amigos agregados. Para una mejor experiencia de usuario, se utilizan modals, permitiendo editar la información de cada amigo directamente desde su tarjeta y añadir nuevos amigos a través de un modal ubicado en el Navbar. Esta estructura facilita una gestión intuitiva y eficiente de los contactos, ofreciendo una navegación fluida y un diseño funcional. 😌
+
+
+## 📌 Cómo Inicializar el Proyecto  
+
+Para ejecutar correctamente el proyecto y visualizar la interfaz del **frontend**, sigue estos pasos:  
+
+### 🔹 **Iniciar el Frontend**  
+1. Accede a la carpeta **`frontend`** desde la terminal:  
+   cd frontend
+2. Luego, ejecuta el siguiente comando para iniciar el servidor de desarrollo:
+   npm run dev
+3. Esto iniciará la aplicación y podrás verla en tu navegador en la dirección proporcionada por el terminal (por defecto, http://localhost:3000 en Vite).
+
+### 🔹 **Iniciar el Frontend**  
+1. Accede a la carpeta **`backend`** desde la terminal:  
+   cd backend
+2. Activa el entorno virtual de Python con el siguiente comando:
+   source venv/Scripts/activate  # En Windows
+3. Luego, ejecuta el siguiente comando para inicializar el servidor con Flask y habilitar la recarga automática en caso de cambios:
+   flask run --reload
+4. El backend se ejecutará en http://127.0.0.1:5000.
