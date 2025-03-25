@@ -30,7 +30,7 @@ Este proyecto fue desarrollado con las siguientes tecnologías:
 
 ## 📌 Cómo Inicializar el Proyecto  
 
-Para ejecutar correctamente el proyecto y visualizar la interfaz del **frontend**, sigue estos pasos:  
+Para ejecutar correctamente el proyecto y visualizar la interfaz del **frontend** y **backend**, sigue estos pasos:  
 
 ### 🔹 **Iniciar el Frontend**  
 1. Accede a la carpeta **`frontend`** desde la terminal:  cd frontend
