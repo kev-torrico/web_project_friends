@@ -58,22 +58,22 @@ const CreateUserModal = ({ setUsers }) => {
       setTimeout(() => {
         setOpen(false);
         setUsers((prevUsers) => [...prevUsers, data]);
-      }, 1500);
-    } catch (error) {
-      toaster.create({
-        title: "An error has occurred",
-        type: "error",
-        description: error.message,
-        duration: 6000,
-      });
-    } finally {
-      setIsLoading(false);
+      }, 1000);
       setInputs({
         name: "",
         role: "",
         description: "",
         gender: "",
       });
+    } catch (error) {
+      toaster.create({
+        title: "An error has occurred",
+        type: "error",
+        description: error.message,
+        duration: 4000,
+      });
+    } finally {
+      setIsLoading(false);
     }
   };
 

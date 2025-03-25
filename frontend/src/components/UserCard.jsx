@@ -16,12 +16,14 @@ const UserCard = ({ user, setUsers }) => {
         throw new Error(data.error);
       }
       setUsers((prevUsers) => prevUsers.filter((u) => u.id !== user.id)); //Filter the one the is deleted
-      toaster.create({
-        title: "Success",
-        description: "Friend deleted succesfully",
-        type: "success",
-        duration: 4000,
-      });
+      setTimeout(() => {
+        toaster.create({
+          title: "Success",
+          description: "Friend deleted successfully",
+          type: "success",
+          duration: 4000,
+        });
+      }, 100);
     } catch (error) {
       toaster.create({
         title: "An error has occurred",
@@ -47,7 +49,7 @@ const UserCard = ({ user, setUsers }) => {
               </Box>
             </Flex>
             <Flex>
-              <EditModal />
+              <EditModal user={user} setUsers={setUsers} />
               <IconButton
                 variant={"ghost"}
                 color={"red"}
