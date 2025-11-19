@@ -39,6 +39,8 @@ Para ejecutar correctamente el proyecto y visualizar la interfaz del **frontend*
 
 ### 🔹 **Iniciar el Backend**  
 1. Accede a la carpeta **`backend`** desde la terminal:  cd backend
-2. Activa el entorno virtual de Python con el siguiente comando:  source venv/Scripts/activate  # En Windows
+2. Crea un nuevo entorno de python: python -m venv vevn
+2. Activa el entorno virtual de Python con el siguiente comando:  source venv/Scripts/activate
+3. Instala todas las dependencias del proyecto con: pip install requirements.txt
 3. Luego, ejecuta el siguiente comando para inicializar el servidor con Flask y habilitar la recarga automática en caso de cambios:  flask run --reload
 4. El backend se ejecutará en http://127.0.0.1:5000.
