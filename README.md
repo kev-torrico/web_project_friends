@@ -34,8 +34,9 @@ Para ejecutar correctamente el proyecto y visualizar la interfaz del **frontend*
 
 ### 🔹 **Iniciar el Frontend**  
 1. Accede a la carpeta **`frontend`** desde la terminal:  cd frontend
-2. Luego, ejecuta el siguiente comando para iniciar el servidor de desarrollo:  npm run dev
-3. Esto iniciará la aplicación y podrás verla en tu navegador en la dirección proporcionada por el terminal (por defecto, http://localhost:3000 en Vite).
+2. Luego, ejecuta el siguiente comando para descargar e instalar las dependencias de node necesarias para el proyecto: npm install
+3. Posteriormente, ejecuta el siguiente comando para iniciar el servidor de desarrollo:  npm run dev
+4. Esto iniciará la aplicación y podrás verla en tu navegador en la dirección proporcionada por el terminal (por defecto, http://localhost:3000 en Vite).
 
 ### 🔹 **Iniciar el Backend**  
 1. Accede a la carpeta **`backend`** desde la terminal:  cd backend
